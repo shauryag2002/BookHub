@@ -10,9 +10,10 @@
   "author": "shaurya",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
-    "express": "^4.18.1",
-    "mongoose": "^6.4.6"
+    "express": "^4.18.2",
+    "mongoose": "^6.8.2"
   }
 }
