@@ -21,10 +21,10 @@ import About from './About';
 import Update from './Update';
 // import { Navbar } from 'react-bootstrap/Navbar';
 // import Navbar from './Navbarr';
-import Navbarr from './Navbarr';
+// import Navbarr from './Navbarr';
 async function renderPosts () {
 
-    let res =  await axios.get('http://localhost:5000/book');
+    let res =  await axios.get('https://bookhubapi-shauryag2002.vercel.app/book');
     let posts = res.data;
     
     return posts;
@@ -44,11 +44,11 @@ function App() {
             <li className="margin"><Link to="/about">About</Link></li>
             <li className="margin"><Link to="/add">ADD</Link></li>
             {/* <li className="margin"><a href="/services">services</a></li> */}
-            <li className="margin">
+            {/* <li className="margin"> */}
           {/* <Routes >
               <Route path='/book' element={<Post/>}/>
           </Routes> */}
-              </li>
+              {/* </li> */}
         </ul>
     </nav>
     {/* <Navbarr/> */}

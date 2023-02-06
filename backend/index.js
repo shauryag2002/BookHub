@@ -10,6 +10,7 @@ app.use(cors())
 dotenv.config({
     path:"./config.env"
 })
+const hostname="0.0.0.0"
 mongoose.connect("mongodb+srv://shaurya:shaurya@cluster0.5e4fkya.mongodb.net/?retryWrites=true&w=majority")
 app.use("/book",router)
 app.get("/",async(req,res)=>{
@@ -18,3 +19,4 @@ app.get("/",async(req,res)=>{
 app.listen(5000,function(){
     console.log("server started at http://localhost:5000")
 })
+// module.exports=app;

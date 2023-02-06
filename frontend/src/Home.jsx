@@ -4,7 +4,7 @@ import  axios from 'axios';
 import { useState,useEffect } from 'react';
 async function renderPosts () {
 
-    let res =  await axios.get('http://localhost:5000/book');
+    let res =  await axios.get('https://bookhubapi-shauryag2002.vercel.app/book');
     let posts = res.data;
     
     return posts;

@@ -1,7 +1,7 @@
 import axios from "axios";
 export async function getAllBooks () {
 
-    let res =  await axios.get('http://localhost:5000/book');
+    let res =  await axios.get('https://bookhubapi-shauryag2002.vercel.app/book');
     let posts = res.data;
     // console.log(posts)
     // return  posts.map((post, i) => {
@@ -13,7 +13,7 @@ export async function getAllBooks () {
 }
 export async function getBook () {
     let inp=document.getElementById('inp');
-    let res =  await axios.get(`http://localhost:5000/book/${inp.value}`);
+    let res =  await axios.get(`https://bookhubapi-shauryag2002.vercel.app/book/${inp.value}`);
     let posts = res.data;
     // console.log(posts)
     // return  posts.map((post, i) => {
@@ -26,7 +26,7 @@ export async function getBook () {
     export async function deleteBook (id) {
         
         // let inp=document.getElementById('inp');
-        let res =  await axios.delete(`http://localhost:5000/book/${id}`);
+        let res =  await axios.delete(`https://bookhubapi-shauryag2002.vercel.app/book/${id}`);
         let posts = res.data;
         // console.log(posts)
     // return  posts.map((post, i) => {
@@ -43,7 +43,7 @@ export async function createBook () {
     let author=document.getElementById("author").value
     let price=document.getElementById("price").value
     let desc=document.getElementById("desc").value
-    let res =  await axios.post('http://localhost:5000/book',{
+    let res =  await axios.post('https://bookhubapi-shauryag2002.vercel.app/book',{
         name,
         image,
         author,
@@ -66,7 +66,7 @@ export async function updateBook (id) {
     let author=document.getElementById("author").value
     let price=document.getElementById("price").value
     let desc=document.getElementById("desc").value
-    let res =  await axios.put(`http://localhost:5000/book/${id}`,{
+    let res =  await axios.put(`https://bookhubapi-shauryag2002.vercel.app/book/${id}`,{
         name:String(name),
         image:String(image),
         author:String(author),

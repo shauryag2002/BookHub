@@ -2,10 +2,11 @@ import React, { useState,useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 // import { updateBook } from './methods/find'
 import axios from 'axios';
+import "./App.css"
 import { updateBook } from './methods/find';
 async function Udate(id){
 
-        let res =  await axios.get(`http://localhost:5000/book/${id}`);
+        let res =  await axios.get(`https://bookhubapi-shauryag2002.vercel.app/book/${id}`);
         let posts = res.data;
     
         return posts;
@@ -52,7 +53,7 @@ async function Udate(id){
     <label htmlFor="price">price:</label>
     <input type="number" id='price' name='price' placeholder='Enter book price' value={price ?price : update.price} onChange={handlePriceChange}/><br />
     <label htmlFor="desc">description:</label>
-    <textarea name="desc" id="desc" cols="30" rows="10" value={desc ?desc : update.desc} onChange={handleDescChange}></textarea>
+    <textarea name="desc" id="desc" cols="30" rows="10" value={desc ?desc : update.desc} onChange={handleDescChange}></textarea><br/>
     {/* <input type="text" id='desc' name='desc' placeholder='Enter book desc...!' value={update.desc} /><br /> */}
     <label htmlFor="image">image:</label>
     <input type="text" id='image' name='images' placeholder='Enter image url of book' value={image ?image : update.image} onChange={handleImageChange}/><br />
